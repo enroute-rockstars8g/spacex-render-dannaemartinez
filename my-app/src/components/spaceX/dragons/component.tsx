@@ -1,5 +1,6 @@
 import React, { FC, useEffect, useState } from "react";
 import { getDragons } from "../../../services/spacex/service.js";
+import "./styles.css"
 
 export const Dragons: FC = () => {
   const [actualDragons, setActualDragons] = useState<any>(undefined);
@@ -21,7 +22,7 @@ export const Dragons: FC = () => {
 
   return (
     <div>
-      <table>
+      <table className="dragons-container">
         <tr>
           <th>Nombre🐉</th>
           <th>Descripción</th>

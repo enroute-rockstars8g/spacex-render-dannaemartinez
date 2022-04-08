@@ -1,0 +1,6 @@
+.dragons-container {
+    height: 100vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../../../assets/IMG_1312.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
