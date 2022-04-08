@@ -1,5 +1,6 @@
 import React, { ChangeEvent, FC, useEffect, useState } from "react";
 import { getShips } from "../../../services/spacex/service.js"
+import "./styles.css"
 
 export const Ships: FC = () => {
   const [actualShips, setActualShips] = useState<any>(undefined);
@@ -21,7 +22,7 @@ export const Ships: FC = () => {
 
 
   return (
-    <div>
+    <div className="ships-container">
       <h2>Ships</h2>
       <table>
         <tr>

@@ -1,5 +1,6 @@
 import React, { FC, useEffect, useState } from "react";
 import { getRockets } from "../../../services/spacex/service.js";
+import "./styles.css"
 
 export const Rockets: FC = () => {
   const [actualRockets, setActualRockets] = useState<any>(undefined);
@@ -20,7 +21,7 @@ export const Rockets: FC = () => {
   };
 
   return (
-    <div>
+    <div className="rockets-container">
       <table>
         <tr>
         <th>Nombre🚀</th>
