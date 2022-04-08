@@ -16,16 +16,16 @@
 
   background-color: #282c34;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: blanchedalmond;
 }
-.App {
+/*.App {
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 100px auto;
   grid-template-areas: 
   "menu"
   "content";
-}
+}*/
