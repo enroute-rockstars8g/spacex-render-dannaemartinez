@@ -13,4 +13,6 @@ body{
   background-size: cover;
   background-image: url("../src/assets/space.jpg");
   background-repeat: no-repeat;
+  background-position: 0px -50px;
+  background-attachment: fixed;
 }
