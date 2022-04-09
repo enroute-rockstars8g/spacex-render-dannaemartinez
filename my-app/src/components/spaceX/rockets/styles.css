@@ -1,7 +1,8 @@
 .rockets-container {
   margin: 10px;
     height: 90vh;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../../../assets/rock.jpg");
+    /* background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../../../assets/rock.jpg"); */
     background-repeat: no-repeat;
     background-size: 100%;
+    color:white;
   }

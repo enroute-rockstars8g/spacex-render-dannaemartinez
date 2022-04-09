@@ -1,5 +1,7 @@
 import React, { FC, useEffect, useState } from "react";
 import { getRockets } from "../../../services/spacex/service.js";
+import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
 import "./styles.css"
 
 export const Rockets: FC = () => {
@@ -22,32 +24,35 @@ export const Rockets: FC = () => {
 
   return (
     <div className="rockets-container">
-      <table>
+      <h2>Rockets</h2>
+      <Table striped bordered hover variant="dark">
+      <thead>
         <tr>
-        <th>Nombre🚀</th>
+        <th>Nombre</th>
           <th>Descripción</th>
-          <th>Primer Vuelo 🚀</th>
+          <th>Primer Vuelo</th>
           <th>Rate</th>
           <th>Wikipedia</th>
           <th>Activo ✅</th>
         </tr>
-
-        {actualRockets !== undefined ?
+        </thead>
+        <tbody>
+          {actualRockets !== undefined ?
           actualRockets.map(rocket => {
-            console.log(rocket)
-            return <tr>
+            return(
+               <tr>
               <td>{rocket.name}</td>
               <td>{rocket.description}</td>
               <td>{rocket.first_flight}</td>
               <td>{rocket.success_rate_pct}%</td>
               <td><a href={rocket.wikipedia}>Details</a></td>
               <td>{rocket.active ? "✅" : "❎"}</td>
-            </tr>
+            </tr>)
           })
           : null}
-      </table>
-
-      <button onClick={fetchRockets}>Refresh all Rockets</button>
+          </tbody>
+      </Table>
+      <Button variant="dark" onClick={fetchRockets}>Refresh all Rockets</Button>
     </div>
   );
 };
